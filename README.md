@@ -49,3 +49,23 @@
 
 
 ## Part 2 - Adding posts
+
+1. Create a posts table that references the fellows table
+2. Create a `Post` model with methods:
+   - create(content, fellowId)
+   - list() (not really used other than for testing)
+   - findById(id) (not really used other than for testing)
+   - findPostsByFellowId(fellowId)
+   - delete(id)
+   - deleteAllPostsForFellow(fellowId)
+3. make the `postControllers`
+4. define endpoints in `index.js`
+5. test with postman
+6. add frontend components + fetching on the FellowDetails page
+    - components:
+      - list of posts with delete buttons
+      - form for adding a new post 
+    - event handlers / fetching:
+      - useEffect now also fetches fellow posts -> `GET /api/fellows/:fellowId/posts`
+      - list item delete button on click -> `DELETE /api/posts/:id`
+      - new post form on submit -> `POST /api/fellows/:fellowId/posts/:id`
