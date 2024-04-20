@@ -70,3 +70,7 @@
       - list item delete button on click -> `DELETE /api/posts/:id`
       - new post form on submit -> `POST /api/fellows/:fellowId/posts/:id`
 7. when deleting a fellow, we need to delete posts first
+
+## Part 3 - Adapters
+
+Create an "adapter" file for fetching fellows and posts
