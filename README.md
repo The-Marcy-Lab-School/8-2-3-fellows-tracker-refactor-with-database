@@ -1,5 +1,15 @@
 # Refactoring the Fellow Tracker
 
+Up until now, the app structure has looked like this:
+
+![](./img/mvc-diagram.svg)
+
+The model is the layer of the application that directly manipulates the data. It provides methods that the controllers can use to execute those changes whenever the frontend makes the appropriate request. 
+
+Currently, the model uses an in-memory array to store data. The issue is that the data is not persistent — each time we restart the server, all data created during that "session" is lost. 
+
+Now that we have a database and can connect to it using Knex, we can refactor our model to use that database and have our data persist.
+
 ## Part 1 - Adding a DB for the fellows
 
 1. create a database called `fellows_tracker_f23`
